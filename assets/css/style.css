@@ -28,10 +28,11 @@ body {
   /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
   font-size: 1.75rem;
   line-height: 1.5;
-  color: var(--gin);
+  color: var(--ice-cold);
   background-color: var(--wine-berry);
 }
 
+/* General Sizing/Scaling for Fonts from h1-h6 */
 h1,
 h2,
 h3,
@@ -69,12 +70,35 @@ h6 {
   font-size: 1.5rem;
 }
 
+/* Styling for the header (border/box area) */
+.header nav {
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+}
+
+/* Styling and spacing between the navigation links at the top. */
+.header nav ul li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+/* Hyperlink styling (Navigation links) */
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Paragraph styling */
 p {
+  font-size: 16px;
   margin-bottom: 1rem;
 }
 
+/* Large selection of fonts */
 code {
-  /* Monospace font stack is used for our code blocks to make it look more like code */
   font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
     'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
     'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
@@ -91,6 +115,13 @@ header {
 header h1.page-title {
   padding: 1rem 1.2rem;
   font-size: 4.5rem;
+}
+
+.profilePicture {
+  height: 213px;
+  width: 252px;
+  float: left;
+  margin-right: 25px;
 }
 
 main {
@@ -135,7 +166,7 @@ footer {
   color: var(--ice-cold);
 
   /* outline is like border, but on the outside of the box instead of inside */
-  outline: 2px dashed var(--gin);
+  outline: 2px dashed var(--ice-cold);
   outline-offset: -2px;
   transition: all 0.5s ease-in-out;
 }
@@ -147,16 +178,18 @@ footer {
   padding: 0.5rem 1rem;
   background-color: var(--wine-berry);
   color: var(--ice-cold);
-  border: 2px solid var(--gin);
+  border: 2px solid var(--ice-cold);
   border-radius: 8px;
   transition: all 0.5s ease-in-out;
 }
 
+/* AAAAAAAAAAAAAAAAAAAAAAAAAAA */
 /* set an outer and inner drop shadow on the card to create a glowing effect on hover */
 .code-card:hover,
 .code-card:hover .card-header {
   box-shadow: inset 0px 0px 8px var(--ice-cold), 0 0 15px var(--ice-cold);
 }
+/* AAAAAAAAAAAAAAAAAAAAAAAAAAA */
 
 /* each card's code block grows to the height of the largest code block on the page, making each card even in height */
 .code-card .code-block {
@@ -169,7 +202,7 @@ footer {
   overflow: auto;
   tab-size: 4;
   padding: 1.2rem 1rem;
-  color: var(--gin);
+  color: var(--ice-cold);
   border-radius: 8px;
   /* use linear-gradient() function to create a fading background  */
   background-image: linear-gradient(
@@ -178,11 +211,6 @@ footer {
   );
   display: flex;
   align-items: center;
-}
-
-/* on <pre> click, select all contents so the code is highlighted */
-.code-card pre:active {
-  user-select: all;
 }
 
 /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
