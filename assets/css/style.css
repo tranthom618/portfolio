@@ -1,7 +1,5 @@
 /* color scheme sourced from http://khroma.co/generator/ */
 :root {
-  --gin: #ffffff;
-
   --wine-berry: #56203E;
   --ice-cold: #9CF7ED;
   --siren: #820342;
@@ -15,15 +13,8 @@
   color: var(--wine-berry);
 }
 
-html {
-  /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
-  font-size: 62.5%;
-}
-
 body {
-  /* Sans Serif font stack is implemented to help select the best font for each type of computer operating system */
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: Helvetica, Arial;
 
   /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
   font-size: 1.75rem;
@@ -32,89 +23,37 @@ body {
   background-color: var(--wine-berry);
 }
 
-/* General Sizing/Scaling for Fonts from h1-h6 */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: 0.625rem;
-  color: var(--ice-cold);
-  font-weight: 700;
-  line-height: 1.1;
-}
-
-h1 {
-  /* 4rem = 40px (4 * 10px) */
-  font-size: 4rem;
-}
-
-h2 {
-  font-size: 3.5rem;
-}
-
-h3 {
-  font-size: 3rem;
-}
-
-h4 {
-  font-size: 2.5rem;
-}
-
-h5 {
-  font-size: 2rem;
-}
-
-h6 {
-  font-size: 1.5rem;
-}
-
-/* Styling for the header (border/box area) */
+/* Spacing/positioning for the nav links */
 .header nav {
   padding-top: 15px;
   margin-right: 20px;
   float: right;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
 }
 
-/* Styling and spacing between the navigation links at the top. */
+/* Spacing between the navigation links at the top. */
 .header nav ul li {
   display: inline-block;
   margin-left: 25px;
 }
 
-/* Hyperlink styling (Navigation links) */
+/* Navigation links font specific Styling */
 a {
   color: #ffffff;
   text-decoration: none;
 }
 
-/* Paragraph styling */
+/* Paragraph spacing */
 p {
   font-size: 16px;
-  margin-bottom: 1rem;
-}
-
-/* Large selection of fonts */
-code {
-  font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
-    'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
-    'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
-    monospace;
+  margin-bottom: 16px;
 }
 
 header {
-  width: 96%;
+  width: 100%;
   margin: 0 auto;
-  padding: 2.5rem;
-  text-align: center;
-}
-
-header h1.page-title {
-  padding: 1rem 1.2rem;
-  font-size: 4.5rem;
+  padding: 30px;
+  text-align: left;
 }
 
 .profilePicture {
