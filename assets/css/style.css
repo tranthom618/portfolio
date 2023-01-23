@@ -6,174 +6,162 @@
   --carmine: #A30121;
   --lavender-rose: #F9A3E5;
 }
-
-/* set content highlight color and background */
-::selection {
-  background-color: var(--lavender-rose);
-  color: var(--wine-berry);
+/* /////////////////////// */
+/* Universal selector settings */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
+/* Sets the foundation background colour */
 body {
-  font-family: Helvetica, Arial;
-
-  /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
-  font-size: 1.75rem;
-  line-height: 1.5;
-  color: var(--ice-cold);
-  background-color: var(--wine-berry);
+  background-color: var(--lavender-rose);
 }
 
-/* Spacing/positioning for the nav links */
+/* Sets styling for the header */
+.header {
+  padding: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: var(--wine-berry);
+  color: #ffffff;
+}
+
+/* Styling for my name and career */
+.header h1 {
+  display: inline-block;
+  font-size: 48px;
+}
+
+/* Repurposed code from prev project to add flair to "Full Stack Developer" */
+.header h1 .subtitle {
+  font-size: 25px;
+  color: var(--lavender-rose);
+}
+
+/* Styling for the header (border/box area) */
 .header nav {
   padding-top: 15px;
   margin-right: 20px;
   float: right;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
 }
 
-/* Spacing between the navigation links at the top. */
+/* Styling and spacing between the navigation links at the top. */
 .header nav ul li {
   display: inline-block;
   margin-left: 25px;
 }
 
-/* Navigation links font specific Styling */
+/* Hyperlink styling (Navigation links) */
 a {
   color: #ffffff;
-  text-decoration: none;
+  text-decoration: none; /* Removes underline and other styling */
 }
 
-/* Paragraph spacing */
+/* Paragraph styling */
 p {
   font-size: 16px;
-  margin-bottom: 16px;
 }
 
-header {
+/* Hero section refers to the main 'book cover' image. Usually the largest image or the centerpiece. */
+.hero {
+  height: 400px;
   width: 100%;
-  margin: 0 auto;
-  padding: 30px;
-  text-align: left;
+  margin-bottom: 25px;
+  background-image: url("/assets/images/gta.png");
+  background-size: cover;
+  background-position: center;
 }
 
-.profilePicture {
-  height: 213px;
-  width: 252px;
+
+
+/* >>>>Beginning of section for the class "content" and it's contained elements.<<<<< */
+
+/* Unique styling to display certain sections with the image on the left */
+.float-left {
   float: left;
   margin-right: 25px;
 }
 
-main {
-  width: 96%;
-  margin: 2rem auto;
+/* Unique styling to display certain sections with the image on the right */
+.float-right {
+  float: right;
+  margin-left: 25px;
+}
+
+/* Styling and positioning the the main portion of the site. Mainly so it doesn't take up the whole width
+of the page, allowing the 'aside' information bar to have space and be positioned. */
+.about-me {
+  width: 100%;
+  display: flexbox;
+}
+
+/* CSS Styling for articles of the "content" class. Consolidated excess code into one section since all properties
+were the same */
+.about-me article {
+  margin-bottom: 20px;
+  padding: 50px;
+  height: 300px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: var(--siren);
+  color: #ffffff;
+}
+
+/* Associated image styling for each section - Sets max height so the image looks like an interior section. Consolidated 
+excess definitions for each content into a single property setting, as each image had the same sizing*/
+.about-me img {
+  max-height: 200px;
+}
+
+/* All the h2 sections within content have the same properties. Removed excess code to consolidate. */
+.about-me h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+/* Styling and positioning the the main portion of the site. Mainly so it doesn't take up the whole width
+of the page, allowing the 'aside' information bar to have space and be positioned. */
+.content {
+  width: 100%;
+  display: flexbox;
+}
+
+/* CSS Styling for articles of the "content" class. Consolidated excess code into one section since all properties
+were the same */
+.content article {
+  margin-bottom: 20px;
+  padding: 50px;
+  height: 300px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: var(--siren);
+  color: #ffffff;
+}
+
+/* Associated image styling for each section - Sets max height so the image looks like an interior section. Consolidated 
+excess definitions for each content into a single property setting, as each image had the same sizing*/
+.content img {
+  max-height: 200px;
+}
+
+/* All the h2 sections within content have the same properties. Removed excess code to consolidate. */
+.content h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
 }
 
 footer {
-  margin: 1.5rem;
+  padding: 30px;
+  clear: both;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
-}
-
-/* create our main grid with flexbox, use negative margins to offset the padding on the .card-column class */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-/* using a mobile-first approach, set base column width to be 100% and we'll update it using media queries for larger screen sizes */
-.card-column {
-  flex: 1 0 100%;
-  padding: 1.5rem;
-  /* when the screen resizes, make it so our columns don't jump in size */
-  transition: flex-basis 500ms linear;
-  margin-bottom: 1.5rem;
-}
-
-/* make each code card a flexbox column to align and justify content within it */
-.code-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  min-height: 100%;
-  padding: 2rem;
-  color: var(--ice-cold);
-
-  /* outline is like border, but on the outside of the box instead of inside */
-  outline: 2px dashed var(--ice-cold);
-  outline-offset: -2px;
-  transition: all 0.5s ease-in-out;
-}
-
-.code-card .card-header {
-  /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
-  position: relative;
-  margin: -4rem 0 1.5rem 0;
-  padding: 0.5rem 1rem;
-  background-color: var(--wine-berry);
-  color: var(--ice-cold);
-  border: 2px solid var(--ice-cold);
-  border-radius: 8px;
-  transition: all 0.5s ease-in-out;
 }
 
 /* AAAAAAAAAAAAAAAAAAAAAAAAAAA */
 /* set an outer and inner drop shadow on the card to create a glowing effect on hover */
-.code-card:hover,
+/* .code-card:hover,
 .code-card:hover .card-header {
   box-shadow: inset 0px 0px 8px var(--ice-cold), 0 0 15px var(--ice-cold);
-}
+} */
 /* AAAAAAAAAAAAAAAAAAAAAAAAAAA */
-
-/* each card's code block grows to the height of the largest code block on the page, making each card even in height */
-.code-card .code-block {
-  flex-grow: 1;
-}
-
-.code-card pre {
-  /* set styles to make it so code wraps in <pre> instead of overflowing */
-  white-space: pre-wrap;
-  overflow: auto;
-  tab-size: 4;
-  padding: 1.2rem 1rem;
-  color: var(--ice-cold);
-  border-radius: 8px;
-  /* use linear-gradient() function to create a fading background  */
-  background-image: linear-gradient(
-    rgba(232, 102, 236, 0.3) 0%,
-    rgba(232, 102, 236, 0.6) 100%
-  );
-  display: flex;
-  align-items: center;
-}
-
-/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
-@media screen and (min-width: 768px) {
-  /* on tablets, set columns to only be 50% of the width and not grow */
-  .card-column {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
-  /* select the last child to grow to full width if it has space to grow */
-  .card-column:last-child {
-    flex-grow: 1;
-  }
-}
-
-/* media query for larger screens */
-@media screen and (min-width: 992px) {
-  header {
-    width: 75%;
-  }
-
-  .card-column {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-  }
-}

@@ -4,7 +4,7 @@
 
 ## Description
 
-The purpose of creating my own webpage was to have an online resume of sorts. A profile that displays the collection of my career as a full stack developer. As of January 17, 2023, my portfolio doesn't have much to show, so it'll be pretty barebones but we all need to start somewhere.
+The purpose of creating my own webpage was to have an online resume and portfolio of my full stack development career. A profile that displays the collection of my projects.
 
 ## Installation
 
@@ -23,7 +23,7 @@ The navigation links are available at the top right to view each section for mor
 
 1) Code structure was inferred or referenced from various coursework through the University of Toronto - School of Continuing Studies - Coding Bootcamp
 
-2) Template of reset.css was cited an online public license/domain from http://meyerweb.com/eric/tools/css/reset/  
+2) Template of reset.css was cited from an online public license/domain from http://meyerweb.com/eric/tools/css/reset/  
 
 ## License
 

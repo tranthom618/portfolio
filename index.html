@@ -7,81 +7,63 @@ of every html document. -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Developer Portfolio of Thomas Tran</title>
+  <title>Thomas Tran - Full Stack Developer Portfolio</title>
   <link rel="stylesheet" href="assets/css/reset.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
+    
 <body>
-<!-- Header // Centerpiece Title -->
-  <header>
-    <h1 class="page-title">
-      Thomas Tran
-    </h1>
-    <h5>Full Stack Web Developer</h5>
-    <p>
-      Welcome to the personal procurement of my full-stack development career! Unfortunately you've caught me at a bad time and there's really nothing much to see here. Come back another day and I might have something more juicy to show off.
-    </p>
-  </header>
-
   <section class="header">
-    <img src="./assets/css/images/profile.png" class="profilePicture" alt="Profile Picture"/>
-    <h6>Thmas Tran</h6>
-    <h6>Full Stack Developer</h6>
+    <h1>Thomas Tran <span class= "subtitle">Full Stack Developer</span></h1>
     <nav>
       <ul>
         <li>
-          <a href="#premier-project">Premier Projects</a>
+          <a href="#about-me">About Me</a>
         </li>
         <li>
-          <a href="#creative-concepts">Creative Concepts</a>
+          <a href="#proj-portfolio">Projects Portfolio</a>
         </li>
         <li>
-          <a href="#miscellaneous-masterpieces">Miscellaneous Masterpieces</a>
+          <a href="#contact-me">Contact Me</a>
         </li>
       </ul>
     </nav>
   </section>
+  
+  <section class="hero"></section>
+  
+  <section class="about-me">
+    <article>
+      <img src="./assets/images/profile.png" class="float-left" alt="Developer's Profile Picture"/>
+      <h2>About Me</h2>
+      <p>
+        The dominance of mobile internet use means that users are searching for the right business as they travel, shop, or sit on their couch at home. Search Engine Optimization (SEO) allows you to increase your visibility and find the right customers for your business.
+      </p>
+      <img src="./assets/images/arnold.png" class="float-right" alt="Assistant's Photo"/>
+    </article>
+  </section>
+  
+  <section class="content">
+    <article id="proj-portfolio" class="proj-portfolio">
+      <img src="assets/images/online-reputation-management.jpg" class="float-right" alt="Laptop view improved online reputation"/>
+      <h2>Project Portfolio</h2>
+      <p>
+        The web is full of opinions, and some of these can be negative. Social media allows anyone with an internet connection to say whatever they want about your business. Online Reputation Management gives you the control over what potential customers see when they search for your business.
+      </p>
+    </article>
 
-  <main>
-    <section class="card-column">
-      <div class="card-column">
-        <figure class="card code-card">
-          <h2 class="card-header">Premier Projects</h2>
-          <div class="card-body">
-            <p>This section displays my premier projects that took extra thought, time and care to develop.</p>
-          </div>
-          <!-- with the <pre> element, it counts all spaces literally, so proper code indentation cannot be applied in this case -->
-          <pre class="code-block"><code>image placeholder</code></pre>
-        </figure>
-      </div>
-
-      <div class="card-column">
-        <figure class="card code-card">
-          <h2 class="card-header">Creative Concepts</h2>
-          <div class="card-body">
-            <p>The works that really allowed me to excel creatively and show off!</p>
-          </div>
-          <pre class="code-block"><code>placeholder image</code></pre>
-        </figure>
-      </div>
-
-      <div class="card-column">
-        <figure class="card code-card">
-          <h2 class="card-header">Miscellaneous Masterpieces</h2>
-          <div class="card-body">
-            <p>Finally, all the projects that don't fit in any particular category but I'm still exceptionally proud of. Due to either being an impressive solo project, or simply a piece of work I had special fondness for.</p>
-          </div>
-          <pre class="code-block"><code>image placeholder</code></pre>
-        </figure>
-      </div>
-    </section>
-  </main>
-
+    <article id="contact-me" class="contact-me">
+      <img src="assets/images/social-media-marketing.jpg" class="float-left" alt="Various social media buzzwords and phrases"/>
+      <h2>Contact Me</h2>
+      <p>
+        Other featured projects that deserve attention!
+      </p>
+    </article>
+  </section>
   <footer>
     <h3>Made with 🍺, 🌮 and CSS</h3>
   </footer>
 
 </body>
-
 </html>
