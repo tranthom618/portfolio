@@ -67,8 +67,10 @@ p {
 
 /* Hero section refers to the main 'book cover' image. Usually the largest image or the centerpiece. */
 .hero {
-  height: 400px;
-  width: 100%;
+  display: flex;
+  flex-shrink: 1;
+  height: 50%;
+  max-width: 100%;
   margin-bottom: 25px;
   background-image: url("/assets/images/gta.png");
   background-size: cover;
@@ -91,13 +93,13 @@ p {
   margin-left: 25px;
 }
 
-/* Styling and positioning the the main portion of the site. Mainly so it doesn't take up the whole width
-of the page, allowing the 'aside' information bar to have space and be positioned. */
+/* Styling for the About Me container. */
 .about-me {
   width: 100%;
-  display: flexbox;
+  display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: nowrap;
 }
 
 /* CSS Styling for articles of the "content" class. Consolidated excess code into one section since all properties
@@ -109,23 +111,55 @@ were the same */
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: var(--siren);
   color: #ffffff;
-  
-  justify-content: space-evenly;
-  align-items: center;
 }
 
 /* Associated image styling for each section - Sets max height so the image looks like an interior section. Consolidated 
 excess definitions for each content into a single property setting, as each image had the same sizing*/
 .about-me img {
   justify-content: space-evenly;
-  align-items: center;
   max-height: 200px;
+}/* set an outer and inner drop shadow on the card to create a glowing effect on hover */
+.about-me img:hover {
+  box-shadow: inset 0px 0px 8px var(--ice-cold), 0 0 15px var(--ice-cold);
+  vertical-align: top;
 }
 
 /* All the h2 sections within content have the same properties. Removed excess code to consolidate. */
 .about-me h2 {
   margin-bottom: 20px;
   font-size: 36px;
+}
+
+.about-me am1 {
+  display: flexbox;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  flex: 1;
+}
+
+.about-me am2 {
+  display: flexbox;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  flex: 2;
+  width: 33.3%;
+}
+
+.about-me am3 {
+  display: flexbox;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  flex: 1;
+}
+
+.am1 figcaption {
+  margin-right: 15px;
+  text-align: center;
+}
+
+.am3 figcaption {
+  margin-left: 25px;
+  text-align: center;
 }
 
 /* Styling and positioning the the main portion of the site. Mainly so it doesn't take up the whole width
@@ -140,7 +174,7 @@ were the same */
 .content article {
   margin-bottom: 20px;
   padding: 50px;
-  height: 300px;
+  height: 20vh;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: var(--siren);
   color: #ffffff;
@@ -148,8 +182,8 @@ were the same */
 
 /* Associated image styling for each section - Sets max height so the image looks like an interior section. Consolidated 
 excess definitions for each content into a single property setting, as each image had the same sizing*/
-.content img {
-  max-height: 200px;
+.content figcaption {
+  justify-content: center;
 }
 
 /* All the h2 sections within content have the same properties. Removed excess code to consolidate. */
@@ -160,10 +194,34 @@ excess definitions for each content into a single property setting, as each imag
 
 footer {
   padding: 30px;
-  clear: both;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
 }
+
+/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+/* @media screen and (min-width: 768px) {
+  /* on tablets, set columns to only be 50% of the width and not grow */
+  /* .card-column {
+    flex: 0 0 50%;
+    max-width: 50%;
+  } */
+
+  /* select the last child to grow to full width if it has space to grow */
+  /* .card-column:last-child {
+    flex-grow: 1;
+  }
+} */
+
+/* media query for larger screens */
+/* @media screen and (min-width: 992px) {
+  header {
+    width: 75%;
+  }
+
+  .card-column {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+} */
 
 /* AAAAAAAAAAAAAAAAAAAAAAAAAAA */
 /* set an outer and inner drop shadow on the card to create a glowing effect on hover */
