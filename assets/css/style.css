@@ -6,8 +6,8 @@
   --carmine: #A30121;
   --lavender-rose: #F9A3E5;
 }
-/* /////////////////////// */
-/* Universal selector settings */
+
+/* Universal settings to keep webpage contained within the screen/window without excess scrolling */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -162,6 +162,17 @@ excess definitions for each content into a single property setting, as each imag
   text-align: center;
 }
 
+img {
+  max-height: 150px;
+}
+
+img:hover {
+  box-shadow: inset 0px 0px 8px var(--ice-cold), 0 0 15px var(--ice-cold);
+  vertical-align: top;
+}
+
+
+
 /* Styling and positioning the the main portion of the site. Mainly so it doesn't take up the whole width
 of the page, allowing the 'aside' information bar to have space and be positioned. */
 .content {
@@ -174,19 +185,17 @@ were the same */
 .content article {
   margin-bottom: 20px;
   padding: 50px;
-  height: 20vh;
+  height: 300px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: var(--siren);
   color: #ffffff;
 }
 
-/* Associated image styling for each section - Sets max height so the image looks like an interior section. Consolidated 
-excess definitions for each content into a single property setting, as each image had the same sizing*/
-.content figcaption {
+
+figcaption {
   justify-content: center;
 }
 
-/* All the h2 sections within content have the same properties. Removed excess code to consolidate. */
 .content h2 {
   margin-bottom: 20px;
   font-size: 36px;
